@@ -1,6 +1,6 @@
-local VERSION = 1.01
+local VERSION = 1.02
 local TESTVERSION = false
-local AUTOUPDATE = false
+local AUTOUPDATE = true
 local UPDATE_HOST = "raw.github.com"
 local UPDATE_PATH = '/Hirschmilch/BoL-Scripts/master/HMOrianna?rand='..math.random(1,10000)
 local UPDATE_FILE_PATH = SCRIPT_PATH.."HMOrianna.lua"
@@ -15,7 +15,7 @@ if AUTOUPDATE then
 			if tonumber(VERSION) < ServerVersion then
 				script_Messager("New version available "..ServerVersion)
 				script_Messager("Updating, please don't press F9")
-				DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () script_Messager("Successfully updated. ("..version.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
+				DelayAction(function() DownloadFile(UPDATE_URL, UPDATE_FILE_PATH, function () script_Messager("Successfully updated. ("..VERSION.." => "..ServerVersion.."), press F9 twice to load the updated version.") end) end, 3)
 			else
 				script_Messager("You have got the latest version ("..ServerVersion..")")
 			end
@@ -24,9 +24,6 @@ if AUTOUPDATE then
 		script_Messager("Error downloading version info")
 	end
 end
-
-
-
 
 local draw = {ready = false, time = nil, sPos = nil, ePos = nil, speed = nil}
 local qReady, wReady, eReady, rReady = false, false, false, false
