@@ -54,7 +54,7 @@ function FioraYouWHORE()
 end
 
 function OnWndMsg(msg, key)
-	if msg == 514 then
+	if msg == 514 and Menu.OS.Select then
 		local current, temp = nil, nil
 		for i, enemy in ipairs(enemyHeroes) do
 			if GetDistanceSqr(enemy, mousePos) < 40000 then
