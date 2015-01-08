@@ -95,7 +95,7 @@ function CastRangedQ()
 end
 
 function CastR()
-	if rReady then
+	if rReady and target.r then
 		CastSpell(_R, target.r)
 	end
 end
