@@ -1,10 +1,10 @@
 -------------------------
 -- Hirschmilch Orianna
--- Version: 1.11
+-- Version: 1.12
 -- Patch 5.1
 -------------------------
 
-local VERSION = 1.11
+local VERSION = 1.12
 local TESTVERSION = false
 local AUTOUPDATE = true
 local UPDATE_HOST = "raw.github.com"
